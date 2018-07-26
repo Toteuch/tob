@@ -5,22 +5,22 @@
 
 	<groupId>com.toteuch</groupId>
 	<artifactId>tob</artifactId>
-	<version>0.1</version>
+	<version>0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>tob</name>
 	<url>http://maven.apache.org</url>
 
 	<distributionManagement>
-        <repository>
-            <id>toteuchRepo.write</id>
-            <url>${toteuchRepo.write.url}</url>
-        </repository>
-        <snapshotRepository>
-            <id>toteuchRepo.write</id>
-            <url>${toteuchRepo.write.url}</url>
-        </snapshotRepository>
-    </distributionManagement>
+		<repository>
+			<id>toteuchRepo.write</id>
+			<url>${toteuchRepo.write.url}</url>
+		</repository>
+		<snapshotRepository>
+			<id>toteuchRepo.write</id>
+			<url>${toteuchRepo.write.url}</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<repositories>
 		<repository>
@@ -31,6 +31,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<hibernate.version>4.2.15.Final</hibernate.version>
 	</properties>
 
 	<dependencies>
@@ -38,6 +39,16 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>5.0.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.1-901-1.jdbc4</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

@@ -2,12 +2,12 @@ package com.toteuch.tob.entity;
 
 public class UserMouseCoordConfig {
 	private long id;
-	private User tobUser;
+	private TOBUser tobUser;
 	private String name;
 	private int x;
 	private int y;
 	
-	public UserMouseCoordConfig(User tobUser, String name, int x, int y) {
+	public UserMouseCoordConfig(TOBUser tobUser, String name, int x, int y) {
 		this.tobUser = tobUser;
 		this.name = name;
 		this.x = x;
@@ -22,11 +22,11 @@ public class UserMouseCoordConfig {
 		this.id = id;
 	}
 
-	public User getTobUser() {
+	public TOBUser getTobUser() {
 		return tobUser;
 	}
 
-	public void setTobUser(User tobUser) {
+	public void setTobUser(TOBUser tobUser) {
 		this.tobUser = tobUser;
 	}
 

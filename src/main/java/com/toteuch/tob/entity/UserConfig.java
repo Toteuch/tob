@@ -3,11 +3,11 @@ package com.toteuch.tob.entity;
 public class UserConfig {
 	
 	private long id;
-	private User tobUser;
+	private TOBUser tobUser;
 	private int minWaitTimeLoading;
 	private int maxWaitTimeLoading;
 	
-	public UserConfig(User tobUser) {
+	public UserConfig(TOBUser tobUser) {
 		this.tobUser = tobUser;
 	}
 
@@ -19,11 +19,11 @@ public class UserConfig {
 		this.id = id;
 	}
 
-	public User getTobUser() {
+	public TOBUser getTobUser() {
 		return tobUser;
 	}
 
-	public void setTobUser(User tobUser) {
+	public void setTobUser(TOBUser tobUser) {
 		this.tobUser = tobUser;
 	}
 
