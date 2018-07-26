@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.toteuch</groupId>
+	<artifactId>tob</artifactId>
+	<version>0.1</version>
+	<packaging>jar</packaging>
+
+	<name>tob</name>
+	<url>http://maven.apache.org</url>
+
+	<distributionManagement>
+        <repository>
+            <id>toteuchRepo.write</id>
+            <url>${toteuchRepo.write.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>toteuchRepo.write</id>
+            <url>${toteuchRepo.write.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>toteuchRepo.read</id>
+			<url>${toteuchRepo.read.url}</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>5.0.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<!-- Build an executable JAR -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>com.toteuch.tob.App</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
