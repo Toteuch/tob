@@ -11,7 +11,6 @@
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5435/tob_dev</property>
         <property name="hibernate.connection.username">tob_dev</property>
         <property name="hibernate.connection.password">tob_dev</property>
- 		<property name="hibernate.default_schema">tob_dev</property>
  
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>

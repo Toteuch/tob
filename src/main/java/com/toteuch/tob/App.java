@@ -16,6 +16,9 @@ public class App
     	
     	TOBUser user = new TOBUser("test3", "test3");
 		tobUserDao.saveNewUser(user);
+		
+		TOBUser savedUser = tobUserDao.getTOBUserByLogin("test3");
+		System.out.println(savedUser.getLogin() + " | " + savedUser.getPasswd());		
     	
 //        try {
 //        	IBotSurveillanceService surveillanceService = BotSurveillanceService.getInstance();

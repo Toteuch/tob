@@ -15,7 +15,9 @@ public class TOBUserDao implements ITOBUserDao {
 	}
 	
 	public Long saveNewUser(TOBUser tobUser) {
-		return (Long) session.save(tobUser);
+		Long id = (Long) session.save(tobUser);
+		session.flush();
+		return id;
 		
 	}
 
