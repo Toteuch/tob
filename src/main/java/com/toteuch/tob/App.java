@@ -1,9 +1,5 @@
 package com.toteuch.tob;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-
 import com.toteuch.tob.data.ITOBUserDao;
 import com.toteuch.tob.data.TOBUserDao;
 import com.toteuch.tob.entity.TOBUser;
@@ -16,7 +12,7 @@ public class App
 {
     public static void main( String[] args )
     {
-    	ITOBUserDao tobUserDao = new TOBUserDao();
+    	ITOBUserDao tobUserDao = TOBUserDao.getInstance();
     	
     	TOBUser user = new TOBUser("test3", "test3");
 		tobUserDao.saveNewUser(user);
