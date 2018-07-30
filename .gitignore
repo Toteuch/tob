@@ -1,9 +1,6 @@
 # Compiled class file
 *.class
 
-# Eclipse Configuration
-.classpath
-
 # Target folder
 target/
 
