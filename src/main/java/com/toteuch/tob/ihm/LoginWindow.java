@@ -23,6 +23,7 @@ public class LoginWindow {
 	private JFrame frmTobLogin;
 	private JTextField tfLogin;
 	private JPasswordField tfPassword;
+	private JButton btnLogIn; 
 	private ITOBUserService tobUserService;
 
 	/**
@@ -31,8 +32,9 @@ public class LoginWindow {
 	 */
 	public LoginWindow() throws Exception {
 		initialize();
-		this.frmTobLogin.setVisible(true);
-		this.tobUserService = TOBUserService.getInstance();
+		frmTobLogin.getRootPane().setDefaultButton(btnLogIn);
+		frmTobLogin.setVisible(true);
+		tobUserService = TOBUserService.getInstance();
 	}
 	
 	private void btnLogInEvent() {
@@ -69,7 +71,7 @@ public class LoginWindow {
 		JLabel lblPasswd = new JLabel("Password : ");
 		lblPasswd.setHorizontalAlignment(SwingConstants.RIGHT);
 		
-		JButton btnLogIn = new JButton("Log in");
+		btnLogIn = new JButton("Log in");
 		btnLogIn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnLogInEvent();
