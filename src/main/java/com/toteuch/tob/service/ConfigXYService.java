@@ -5,9 +5,10 @@ import java.util.Map;
 import java.util.Set;
 
 import com.toteuch.tob.data.ConfigXYDao;
-import com.toteuch.tob.data.IConfigXYDao;
+import com.toteuch.tob.data.interfaces.IConfigXYDao;
 import com.toteuch.tob.entity.ConfigXY;
 import com.toteuch.tob.entity.TOBUser;
+import com.toteuch.tob.service.interfaces.IConfigXYService;
 
 public class ConfigXYService implements IConfigXYService {
 

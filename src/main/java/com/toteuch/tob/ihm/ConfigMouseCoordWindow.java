@@ -23,8 +23,8 @@ import com.toteuch.tob.MouseCoord;
 import com.toteuch.tob.entity.ConfigXY;
 import com.toteuch.tob.service.BotNavigationService;
 import com.toteuch.tob.service.ConfigXYService;
-import com.toteuch.tob.service.IBotNavigationService;
-import com.toteuch.tob.service.IConfigXYService;
+import com.toteuch.tob.service.interfaces.IBotNavigationService;
+import com.toteuch.tob.service.interfaces.IConfigXYService;
 
 public class ConfigMouseCoordWindow extends JFrame {
 

@@ -2,9 +2,10 @@ package com.toteuch.tob.service;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.toteuch.tob.data.ITOBUserDao;
 import com.toteuch.tob.data.TOBUserDao;
+import com.toteuch.tob.data.interfaces.ITOBUserDao;
 import com.toteuch.tob.entity.TOBUser;
+import com.toteuch.tob.service.interfaces.ITOBUserService;
 
 public class TOBUserService implements ITOBUserService {
 

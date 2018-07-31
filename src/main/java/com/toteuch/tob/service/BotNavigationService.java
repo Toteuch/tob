@@ -1,9 +1,11 @@
 package com.toteuch.tob.service;
 
 import com.toteuch.tob.BotXY;
+import com.toteuch.tob.entity.GameSystem;
 import com.toteuch.tob.hardware.BotBase;
-import com.toteuch.tob.hardware.GameSystem;
 import com.toteuch.tob.hardware.IBotBase;
+import com.toteuch.tob.service.interfaces.IBotNavigationInterceptor;
+import com.toteuch.tob.service.interfaces.IBotNavigationService;
 
 
 public class BotNavigationService implements IBotNavigationService {

@@ -14,9 +14,11 @@ import java.util.List;
 import javax.imageio.ImageIO;
 
 import com.toteuch.tob.Config;
+import com.toteuch.tob.entity.GameSystem;
 import com.toteuch.tob.hardware.BotBase;
-import com.toteuch.tob.hardware.GameSystem;
 import com.toteuch.tob.hardware.IBotBase;
+import com.toteuch.tob.service.interfaces.IBotNavigationService;
+import com.toteuch.tob.service.interfaces.IBotSurveillanceService;
 
 public class BotSurveillanceService implements IBotSurveillanceService {
 	

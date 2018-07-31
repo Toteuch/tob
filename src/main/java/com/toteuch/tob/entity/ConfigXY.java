@@ -22,6 +22,7 @@ private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="configxy_id")
 	private Long id;
 	
 	@ManyToOne
@@ -84,6 +85,7 @@ private static final long serialVersionUID = 1L;
 		this.y = y;
 	}
 	
+	@Override
 	public boolean equals(Object other) {
 		if(other instanceof ConfigXY) {
 			ConfigXY conf = (ConfigXY) other;
@@ -94,6 +96,7 @@ private static final long serialVersionUID = 1L;
 		return false;
 	}
 	
+	@Override
 	public int hashCode() {
         int result;
         result = getTobUser().hashCode();

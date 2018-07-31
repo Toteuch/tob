@@ -1,5 +1,7 @@
 package com.toteuch.tob.hardware;
 
+import com.toteuch.tob.entity.GameSystem;
+
 public interface IBotBase {
 	//public void clicCoord(MouseCoord tobMouseCoord) throws Exception;
 	public void clicCoord(int x, int y) throws Exception;

@@ -1,6 +1,6 @@
-package com.toteuch.tob.service;
+package com.toteuch.tob.service.interfaces;
 
-import com.toteuch.tob.hardware.GameSystem;
+import com.toteuch.tob.entity.GameSystem;
 
 public interface IBotNavigationService {
 	public boolean gotoGalaxyPage() throws Exception;

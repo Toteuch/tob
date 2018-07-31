@@ -9,29 +9,19 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import com.toteuch.tob.entity.TOBUser;
+import javax.swing.JTextPane;
 
 public class ConfigOnglet extends JPanel {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-	private JTextField tfScreenshotFilepath;
 	
 	/**
 	 * Create the panel.
 	 */
 	public ConfigOnglet() {
 		setLayout(null);
-		
-		JLabel lblScreenshotFilepath = new JLabel("Screenshot filepath :");
-		lblScreenshotFilepath.setBounds(10, 11, 100, 14);
-		add(lblScreenshotFilepath);
-		
-		tfScreenshotFilepath = new JTextField();
-		tfScreenshotFilepath.setBounds(120, 8, 86, 20);
-		add(tfScreenshotFilepath);
-		tfScreenshotFilepath.setColumns(10);
 		
 		JButton btnSetMouseCoords = new JButton("Set Mouse Coords");
 		btnSetMouseCoords.addActionListener(new ActionListener() {
@@ -44,8 +34,13 @@ public class ConfigOnglet extends JPanel {
 				}
 			}
 		});
-		btnSetMouseCoords.setBounds(10, 36, 196, 23);
+		btnSetMouseCoords.setBounds(244, 11, 196, 23);
 		add(btnSetMouseCoords);
+		
+		JTextPane txtpnBlabla = new JTextPane();
+		txtpnBlabla.setText("blabla");
+		txtpnBlabla.setBounds(10, 11, 224, 278);
+		add(txtpnBlabla);
 
 	}
 	

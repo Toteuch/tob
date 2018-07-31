@@ -28,8 +28,12 @@ public class TOBWindow {
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		frame.getContentPane().add(tabbedPane, BorderLayout.CENTER);
+		
 		ConfigOnglet configOnglet = new ConfigOnglet();
 		tabbedPane.add("Configuration", configOnglet);
+		
+		JobSurveillanceOnglet jobSurveillanceOnglet = new JobSurveillanceOnglet();
+		tabbedPane.add("Job Surveillance", jobSurveillanceOnglet);
 	}
 
 }

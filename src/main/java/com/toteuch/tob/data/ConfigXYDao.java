@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
+import com.toteuch.tob.data.interfaces.IConfigXYDao;
 import com.toteuch.tob.entity.ConfigXY;
 import com.toteuch.tob.entity.TOBUser;
 

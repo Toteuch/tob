@@ -7,6 +7,7 @@ import java.awt.event.KeyEvent;
 
 import com.toteuch.tob.BotXY;
 import com.toteuch.tob.Config;
+import com.toteuch.tob.entity.GameSystem;
 
 public class BotBase implements IBotBase {
 	Robot robot;

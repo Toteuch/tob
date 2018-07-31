@@ -1,4 +1,4 @@
-package com.toteuch.tob.service;
+package com.toteuch.tob.service.interfaces;
 
 import java.util.List;
 import java.util.Map;

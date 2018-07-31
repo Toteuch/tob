@@ -1,4 +1,4 @@
-package com.toteuch.tob.data;
+package com.toteuch.tob.data.interfaces;
 
 import java.util.List;
 

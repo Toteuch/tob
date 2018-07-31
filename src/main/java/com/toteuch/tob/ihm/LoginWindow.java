@@ -15,8 +15,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
 
 import com.toteuch.tob.entity.TOBUser;
-import com.toteuch.tob.service.ITOBUserService;
 import com.toteuch.tob.service.TOBUserService;
+import com.toteuch.tob.service.interfaces.ITOBUserService;
 
 public class LoginWindow {
 
