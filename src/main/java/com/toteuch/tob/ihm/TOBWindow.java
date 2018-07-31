@@ -9,15 +9,13 @@ import java.awt.BorderLayout;
 public class TOBWindow {
 
 	private JFrame frame;
-	private TOBUser currentUser;
 
 	/**
 	 * Create the application.
 	 */
-	public TOBWindow(TOBUser user) {
+	public TOBWindow() {
 		initialize();
 		frame.setVisible(true);
-		currentUser = user;
 	}
 
 	/**

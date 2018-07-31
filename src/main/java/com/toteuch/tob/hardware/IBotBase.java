@@ -6,4 +6,5 @@ public interface IBotBase {
 	public void fillGalaxyCoordOnGalaxyPageAndGo(GameSystem system) throws Exception;
 	public void reconnect() throws Exception;
 	public void wait(int borneInf, int borneSup);
+	public void moveMouse(int x, int y) throws Exception;
 }

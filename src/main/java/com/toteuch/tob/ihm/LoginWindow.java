@@ -45,7 +45,8 @@ public class LoginWindow {
 		}
 		TOBUser user = tobUserService.authenticate(this.tfLogin.getText(), sPasswd);
 		if(null != user) {
-			TOBWindow tobWindow = new TOBWindow(user);
+			IHMUtils.setCurrentUser(user);
+			TOBWindow tobWindow = new TOBWindow();
 			this.frmTobLogin.dispose();
 		} else {
 			JOptionPane.showMessageDialog(null, "Authentication failed");

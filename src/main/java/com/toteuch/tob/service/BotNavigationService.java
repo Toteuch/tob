@@ -17,6 +17,11 @@ public class BotNavigationService implements IBotNavigationService {
 		botBase = BotBase.getInstance();
 	}
 	
+	public void testCoords(int x, int y) throws Exception {
+		System.out.println("[INFO] Test de coordonnées...");
+		botBase.moveMouse(x, y);
+	}
+	
 	public boolean gotoGalaxyPage() throws Exception {
 		System.out.println("[INFO] Going to galaxy page");
 		alreadyReco = navigationInterceptor.reconnectIfHaveTo(this.alreadyReco);

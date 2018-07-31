@@ -1,15 +1,23 @@
 package com.toteuch.tob.ihm;
 
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import com.toteuch.tob.entity.TOBUser;
 
 public class ConfigOnglet extends JPanel {
-	private JTextField tfScreenshotFilepath;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
+	private JTextField tfScreenshotFilepath;
+	
 	/**
 	 * Create the panel.
 	 */
@@ -28,7 +36,12 @@ public class ConfigOnglet extends JPanel {
 		JButton btnSetMouseCoords = new JButton("Set Mouse Coords");
 		btnSetMouseCoords.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				btnSetMouseCoordsEvent();
+				try {
+					btnSetMouseCoordsEvent();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});
 		btnSetMouseCoords.setBounds(10, 36, 196, 23);
@@ -36,7 +49,7 @@ public class ConfigOnglet extends JPanel {
 
 	}
 	
-	private void btnSetMouseCoordsEvent() {
+	private void btnSetMouseCoordsEvent() throws Exception {
 		ConfigMouseCoordWindow cmcw = new ConfigMouseCoordWindow();
 		cmcw.setVisible(true);
 	}

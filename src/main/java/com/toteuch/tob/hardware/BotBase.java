@@ -9,25 +9,17 @@ import com.toteuch.tob.BotXY;
 import com.toteuch.tob.Config;
 
 public class BotBase implements IBotBase {
-	//private IUserMouseCoordDao userMouseCoordsDao;
 	Robot robot;
 
 	private BotBase() throws AWTException {
 		robot = new Robot();
 	}
-
-	@Deprecated
+	
 	public void clicCoord(int x, int y) throws Exception {
 		moveMouse(x, y);
 		leftClic();
 		waitLoading();
 	}
-	
-//	public void clicCoord(MouseCoord tobMouseCoord) throws Exception {
-//		moveMouse(tobMouseCoord);
-//		leftClic();
-//		waitLoading();
-//	}
 
 	public void fillGalaxyCoordOnGalaxyPageAndGo(GameSystem system) throws Exception {
 		//moveMouse(MouseCoord.FIELD_GALAXY_GALAXY);
@@ -46,16 +38,9 @@ public class BotBase implements IBotBase {
 		waitLoading();
 	}
 	
-	@Deprecated
-	private void moveMouse(int x, int y) {
+	public void moveMouse(int x, int y) {
 		robot.mouseMove(x, y);
 	}
-
-//	private void moveMouse(MouseCoord tobMouseCoord) throws AWTException {
-//		User tobUser = null; // TODO : getUtilisateurCourant
-//		UserMouseCoordConfig coords = userMouseCoordsDao.findCoord(tobUser, tobMouseCoord);
-//		robot.mouseMove(coords.getX(), coords.getY());
-//	}
 
 	private void leftClic() {
 		robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -148,11 +133,9 @@ public class BotBase implements IBotBase {
 	public void reconnect() throws Exception {
 		System.out.println("[INFO] Reconnecting...");
 		// Clic General View
-		//clicCoord(MouseCoord.BUTTON_GV);
 		clicCoord(BotXY.BUTTON_GV.getX(), BotXY.BUTTON_GV.getY());
 
 		// Clic Play
-		//clicCoord(MouseCoord.BUTTON_PLAY);
 		clicCoord(BotXY.BUTTON_PLAY.getX(), BotXY.BUTTON_PLAY.getY());
 		System.out.println("[INFO] Reconnected");
 	}
