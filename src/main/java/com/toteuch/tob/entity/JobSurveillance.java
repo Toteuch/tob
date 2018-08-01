@@ -18,7 +18,7 @@ import javax.persistence.ManyToOne;
 import org.apache.commons.lang3.StringUtils;
 
 @Entity
-public class JobSurveillance implements Serializable {
+public class JobSurveillance implements Serializable, Comparable<JobSurveillance> {
 
 	/**
 	 * 
@@ -114,5 +114,16 @@ public class JobSurveillance implements Serializable {
 			}
 		}
 		return false;
+	}
+	
+
+	@Override
+	public int compareTo(JobSurveillance arg0) {
+		return this.hashCode() - arg0.hashCode();
+	}
+	
+	@Override
+	public String toString() {
+		return this.target;
 	}
 }
