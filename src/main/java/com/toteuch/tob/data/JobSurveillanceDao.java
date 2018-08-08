@@ -14,15 +14,14 @@ import com.toteuch.tob.entity.TOBUser;
 public class JobSurveillanceDao implements IJobSurveillanceDao {
 
 	@Override
-	public JobSurveillance saveJobSurveillance(JobSurveillance jobSurveillance) {
+	public void saveJobSurveillance(JobSurveillance jobSurveillance) {
 		Session session = HibernateUtils.openSession();
 		Transaction tx = session.beginTransaction();
 		session.flush();
 		session.clear();
-		JobSurveillance persisted = (JobSurveillance) session.save(jobSurveillance);
+		session.saveOrUpdate(jobSurveillance);
 		tx.commit();
 		session.close();
-		return persisted;
 	}
 
 	@Override

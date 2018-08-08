@@ -1,7 +1,7 @@
 package com.toteuch.tob.entity;
 
 import java.io.Serializable;
-import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -16,6 +16,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 import org.apache.commons.lang3.StringUtils;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 @Entity
 public class JobSurveillance implements Serializable, Comparable<JobSurveillance> {
@@ -35,15 +37,17 @@ public class JobSurveillance implements Serializable, Comparable<JobSurveillance
 	private TOBUser tobuser;
 	
 	private String target;
-	@ManyToMany(cascade = { CascadeType.ALL })
+	
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@ManyToMany(cascade = { CascadeType.ALL})
 	@JoinTable(
 	        name = "jobsurveillance_gamesystem", 
 	        joinColumns = { @JoinColumn(name = "jobsurveillance_id") }, 
-	        inverseJoinColumns = { @JoinColumn(name = "gamesystem_id") }
+	        inverseJoinColumns = { @JoinColumn(name = "gamesystem_id")}
 	    )
 	private List<GameSystem> gameSystemList;
-	private Duration startTime;
-	private Duration endTime;
+	private Date startTime;
+	private Date endTime;
 	private Integer waitBetweenSS;
 	private Boolean isActive;
 	public Long getId() {
@@ -58,10 +62,10 @@ public class JobSurveillance implements Serializable, Comparable<JobSurveillance
 	public List<GameSystem> getSystemMap() {
 		return gameSystemList;
 	}
-	public Duration getStartTime() {
+	public Date getStartTime() {
 		return startTime;
 	}
-	public Duration getEndTime() {
+	public Date getEndTime() {
 		return endTime;
 	}
 	public Integer getWaitBetweenSS() {
@@ -82,10 +86,10 @@ public class JobSurveillance implements Serializable, Comparable<JobSurveillance
 	public void setSystemMap(List<GameSystem> gameSystemList) {
 		this.gameSystemList = gameSystemList;
 	}
-	public void setStartTime(Duration startTime) {
+	public void setStartTime(Date startTime) {
 		this.startTime = startTime;
 	}
-	public void setEndTime(Duration endTime) {
+	public void setEndTime(Date endTime) {
 		this.endTime = endTime;
 	}
 	public void setWaitBetweenSS(Integer waitBetweenSS) {

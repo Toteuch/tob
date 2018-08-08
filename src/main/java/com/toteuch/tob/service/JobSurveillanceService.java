@@ -13,10 +13,9 @@ public class JobSurveillanceService implements IJobSurveillanceService {
 	private IJobSurveillanceDao jobSurveillanceDao;
 	
 	@Override
-	public JobSurveillance saveJobSurveillance(JobSurveillance jobSurveillance) {
-		JobSurveillance retVal = null;
+	public void saveJobSurveillance(JobSurveillance jobSurveillance) {
 		if(null != jobSurveillance.getId()) {
-			retVal = jobSurveillanceDao.saveJobSurveillance(jobSurveillance);
+			jobSurveillanceDao.saveJobSurveillance(jobSurveillance);
 		} else {
 			JobSurveillance inDb = jobSurveillanceDao.getByUserAndTarget(jobSurveillance.getTobuser(), jobSurveillance.getTarget());
 			inDb.setEndTime(jobSurveillance.getEndTime());
@@ -24,9 +23,8 @@ public class JobSurveillanceService implements IJobSurveillanceService {
 			inDb.setIsActive(jobSurveillance.getIsActive());
 			inDb.setSystemMap(jobSurveillance.getSystemMap());
 			inDb.setWaitBetweenSS(jobSurveillance.getWaitBetweenSS());
-			retVal = jobSurveillanceDao.saveJobSurveillance(inDb);
+			jobSurveillanceDao.saveJobSurveillance(inDb);
 		}
-		return retVal;		
 	}
 	
 	@Override
@@ -51,7 +49,7 @@ public class JobSurveillanceService implements IJobSurveillanceService {
 		private static JobSurveillanceService instance = new JobSurveillanceService();
 	}
 	
-	public static JobSurveillanceService getInstance() throws Exception {
+	public static JobSurveillanceService getInstance() {
 		return JobSurveillanceServiceHolder.instance;
 	}
 }
